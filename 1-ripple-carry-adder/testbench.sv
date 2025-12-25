@@ -17,7 +17,7 @@ module DUT;
     cin <= 0;
     
     $monitor ("a=0x%0h b=0x%0h cin=0x%0h carry=0x%0h out=0x%0h", a, b, cin, carry, out);
-    for (i = 0; i < 5; i++) begin
+    for (i = 0; i < 10; i++) begin
       #10 a <= $random;
       b <= $random;
       cin <= $random;

@@ -1,5 +1,5 @@
 $date
-	Thu Dec 25 14:58:51 2025
+	Thu Dec 25 17:39:49 2025
 $end
 $version
 	Icarus Verilog
@@ -24,29 +24,49 @@ $scope module add1 $end
 $var wire 1 * a $end
 $var wire 1 + b $end
 $var wire 1 % cin $end
-$var reg 1 , cout $end
-$var reg 1 - out $end
+$var wire 1 , cout $end
+$var wire 1 - out $end
+$var wire 1 . w1 $end
+$var wire 1 / w2 $end
+$var wire 1 0 w3 $end
+$var wire 1 1 w4 $end
+$var wire 1 2 w5 $end
 $upscope $end
 $scope module add2 $end
-$var wire 1 . a $end
-$var wire 1 / b $end
+$var wire 1 3 a $end
+$var wire 1 4 b $end
 $var wire 1 , cin $end
-$var reg 1 0 cout $end
-$var reg 1 1 out $end
+$var wire 1 5 cout $end
+$var wire 1 6 out $end
+$var wire 1 7 w1 $end
+$var wire 1 8 w2 $end
+$var wire 1 9 w3 $end
+$var wire 1 : w4 $end
+$var wire 1 ; w5 $end
 $upscope $end
 $scope module add3 $end
-$var wire 1 2 a $end
-$var wire 1 3 b $end
-$var wire 1 0 cin $end
-$var reg 1 4 cout $end
-$var reg 1 5 out $end
+$var wire 1 < a $end
+$var wire 1 = b $end
+$var wire 1 5 cin $end
+$var wire 1 > cout $end
+$var wire 1 ? out $end
+$var wire 1 @ w1 $end
+$var wire 1 A w2 $end
+$var wire 1 B w3 $end
+$var wire 1 C w4 $end
+$var wire 1 D w5 $end
 $upscope $end
 $scope module add4 $end
-$var wire 1 6 a $end
-$var wire 1 7 b $end
-$var wire 1 4 cin $end
-$var reg 1 " cout $end
-$var reg 1 8 out $end
+$var wire 1 E a $end
+$var wire 1 F b $end
+$var wire 1 > cin $end
+$var wire 1 " cout $end
+$var wire 1 G out $end
+$var wire 1 H w1 $end
+$var wire 1 I w2 $end
+$var wire 1 J w3 $end
+$var wire 1 K w4 $end
+$var wire 1 L w5 $end
 $upscope $end
 $upscope $end
 $upscope $end
@@ -56,6 +76,26 @@ $dumpall
 $end
 #0
 $dumpvars
+0L
+0K
+0J
+0I
+0H
+0G
+0F
+0E
+0D
+0C
+0B
+0A
+0@
+0?
+0>
+0=
+0<
+0;
+0:
+09
 08
 07
 06
@@ -82,13 +122,18 @@ b0 #
 b0 !
 $end
 #10
+16
+1,
+1?
 b110 !
 b110 )
-11
-15
-1,
-1+
 12
+1.
+1@
+0-
+10
+1+
+1<
 1%
 b1 $
 b1 (
@@ -97,36 +142,62 @@ b100 '
 b1 &
 #20
 1"
-14
-05
+1L
+1J
+1>
+1D
 b1 !
 b1 )
-08
+0?
+1B
+0G
 1-
-10
-01
-13
+06
+15
+1H
+0.
+1/
+11
 17
+1:
+1=
+1F
 1*
-1.
-02
+13
+0<
 b1101 $
 b1101 (
 b11 #
 b11 '
 b10 &
 #30
+1>
 b1000 !
 b1000 )
-0-
 0"
-18
+0?
+0-
+02
+1;
+0D
+1G
+0L
+15
+1.
+0/
+00
+19
+0B
+0H
+0J
+0:
+1C
 0+
-1/
+14
+0=
+0F
 03
-07
-0.
-12
+1<
 b10 $
 b10 (
 b101 #
@@ -135,25 +206,179 @@ b11 &
 #40
 b100 !
 b100 )
-15
+1?
+1D
+0G
 1"
-08
-13
-16
+0@
+1A
+1B
+1H
+1K
+1=
+1E
 b110 $
 b110 (
 b1101 #
 b1101 '
 b100 &
 #50
+0?
+0B
+0C
 05
 b1010 !
 b1010 )
-00
-11
-18
-0/
-17
+16
+0;
+1G
+1L
+07
+09
+0H
+1I
+1J
+04
+1F
 b1100 $
 b1100 (
 b101 &
+#60
+0?
+0B
+0C
+0"
+05
+0L
+b1011 !
+b1011 )
+0,
+0J
+17
+0:
+0I
+0K
+1-
+01
+1+
+0F
+0*
+13
+0E
+0%
+b101 $
+b101 (
+b110 #
+b110 '
+b110 &
+#70
+1?
+1B
+1C
+15
+1;
+06
+19
+b1100 !
+b1100 )
+1,
+0-
+12
+0.
+1/
+14
+1*
+03
+b111 $
+b111 (
+b101 #
+b101 '
+b111 &
+#80
+09
+0,
+b1 !
+b1 )
+1-
+02
+0?
+0D
+06
+0G
+1"
+1.
+0/
+1@
+0A
+0B
+07
+18
+0:
+1H
+1K
+0+
+0=
+13
+1E
+b10 $
+b10 (
+b1111 #
+b1111 '
+b1000 &
+#90
+1?
+b1101 !
+b1101 )
+0"
+05
+1G
+0K
+0D
+0;
+0>
+0B
+08
+0C
+1+
+04
+1=
+0*
+03
+0<
+b101 $
+b101 (
+b1000 #
+b1000 '
+b1001 &
+#100
+1J
+1K
+1"
+1>
+16
+1G
+1L
+0?
+1D
+b1011 !
+b1011 )
+12
+1,
+0H
+1I
+0.
+1/
+0@
+1A
+1-
+10
+11
+1F
+1*
+1<
+1%
+b1101 $
+b1101 (
+b1101 #
+b1101 '
+b1010 &
